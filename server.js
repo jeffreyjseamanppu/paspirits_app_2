@@ -1,4 +1,5 @@
 const express = require("express");
+const helmet = require('helmet');
 const cors = require("cors");
 
 //Routes
@@ -8,6 +9,8 @@ const app = express();
 const port = 9021;
 
 app.use(express.json());
+app.use(helmet());
+
 app.use(cors({
     origin: '*'
 }));
